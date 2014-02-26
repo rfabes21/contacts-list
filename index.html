@@ -24,8 +24,6 @@
             <p>This is text that was rendered out by our Marionette App</p>
         </script>
 
-
-
         <script src="./assets/js/vendor/jquery.js"></script>
         <script src="./assets/js/vendor/json2.js"></script>
         <script src="./assets/js/vendor/underscore.js"></script>
@@ -40,15 +38,14 @@
             });
 
             ContactManager.StaticView = Marionette.ItemView.extend({
-                template: "static-template")
+                template: "#static-template"
             });
 
-            ContactManager.on('initializer:after', function(){
+            ContactManager.on('initialize:after', function(){
                 var staticView = new ContactManager.StaticView();
                 ContactManager.mainRegion.show(staticView);
             });
 
             ContactManager.start();
-
         </script>
     </body>
