@@ -5,6 +5,7 @@ ContactManager.module('ContactsApp.List', function(List, ContactManager, Backbon
             var contactsListView = new List.Contacts({
                 collection: contacts
             });
+            ContactManager.mainRegion.show(contactsListView);
         }
     };
 });
